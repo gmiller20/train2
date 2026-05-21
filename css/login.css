@@ -1,0 +1,142 @@
+.login {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 29, 38, 0.7);
+    z-index: 10;
+}
+
+.login.active {
+    display: block;
+}
+
+.login-container {
+    width: 50%;
+    height: 80vh;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(11, 29, 38);
+    border-radius: 5%;
+}
+
+.login-close-row {
+    padding-top: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+.login-close-button {
+    width: 40px;
+    height: auto;
+}
+
+.form {
+    width: 60%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.form-group {
+    font-size: 24px;
+
+    position: relative;
+    text-align: center;
+}
+
+.form-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: 0.3s;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+}
+
+.form-input {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    transition: 0.3s;
+    line-height: 1.6;
+}
+
+.form-input:focus {
+    border-bottom: 1px solid rgba(183, 183, 183, 1);
+}
+
+.form-group+.form-group {
+    margin-top: 30px;
+}
+
+.form-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 24px;
+    width: 150px;
+    line-height: 2.2;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-button:focus,
+.form-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-input:focus~.form-label,
+.form-input:not(:placeholder-shown)~.form-label {
+    top: -20px;
+    font-size: 14px;
+}
+
+@media (max-width: 1023px) {
+    .login-close-button {
+        width: 30px;
+        height: auto;
+    }
+
+    .login-container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 767px) {
+    .login-container {
+        width: 70%;
+    }
+
+    .login-close-button {
+        width: 25px;
+        height: auto;
+    }
+
+    .form-title {
+        font-size: 30px;
+    }
+
+    .form-group {
+        font-size: 18px;
+    }
+
+    .form-button {
+        font-size: 20px;
+    }
+}
